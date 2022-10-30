@@ -4,18 +4,26 @@ from random import randint, choice
 
 
 ### INICIO PARTE 1.1 ###
-class Plato:
-    pass
+class Plato():
+    def __init__(self, nombre:str, calidad, dificultad) -> None:
+        self.nombre = nombre
+        self.calidad = calidad
+        self.dificultad = dificultad
+
 ### FIN PARTE 1.1 ###
 
 ### INICIO PARTE 1.2 ###
-class Bebestible:
-    pass
+class Bebestible(Plato):
+    def __init__(self, nombre, calidad, dificultad, tamano):
+        super.__init__(nombre, calidad, dificultad)
+        self.tamano = tamano
 ### FIN PARTE 1.2 ###
 
 ### INICIO PARTE 1.3 ###
-class Comestible:
-    pass
+class Comestible(Plato):
+    def __init__(self, nombre, calidad, dificultad, cubiertos):
+        super.__init__(nombre, calidad, dificultad)
+        self.cubiertos = cubiertos
 ### FIN PARTE 1.3 ###
 
 

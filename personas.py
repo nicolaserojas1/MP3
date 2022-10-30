@@ -5,23 +5,43 @@ from platos import Comestible, Bebestible
 
 
 ### INICIO PARTE 2.1 ###
-class Persona:
-    pass
+class Persona():
+    def __init__(self, nombre_persona):
+        self.nombre = nombre_persona
 ### FIN PARTE 2.1 ###
 
 ### INICIO PARTE 2.2 ###
-class Repartidor:
-    pass  
+class Repartidor(Persona):
+    def __init__(self, nombre_persona, energia, velocidad):
+        super().__init__(nombre_persona)
+        self.energia = energia
+        self.velocidad = velocidad
+
+    def repartir(self, pedido, distancia):
+        pass
 ### FIN PARTE 2.2 ###
 
 ### INICIO PARTE 2.3 ###
-class Cocinero:
-    pass 
+class Cocinero(Persona):
+    def __init__(self, nombre_persona, energia, habilidad):
+        super().__init__(nombre_persona) 
+        self.energia = energia
+        self.habilidad = habilidad
+
+    def Cocinar(self, solicitar):
+        pass
 ### FIN PARTE 2.3 ###
 
 ### INICIO PARTE 2.4 ###
-class Cliente:
-    pass
+class Cliente(Persona):
+    def __init__(self, nombre_persona, exigencia, distancia, plato_preferido):
+        super().__init__(nombre_persona)
+        self. exigencia = exigencia
+        self. distancia = distancia
+        self.plato_preferido = plato_preferido
+
+    def Recibir_pedido(self, pedido, demora):
+        pass
 ### FIN PARTE 2.4 ###
 
 
