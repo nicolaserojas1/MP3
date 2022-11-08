@@ -4,8 +4,17 @@
 
 ### INICIO PARTE 3 ###
 class Restaurante:
-    pass
-### FIN PARTE 3 #
+    def __init__(self, nombre, platos, cocineros, repartidores):
+        self.nombre = nombre
+        self.platos = platos
+        self.cocineros = cocineros
+        self.repartidores = repartidores
+        self.calificacion = 0
+
+    def recibir_pedidos(self, clientes):
+        self.calificacion 
+
+### FIN PARTE 3 #<
 
 
 if __name__ == "__main__":

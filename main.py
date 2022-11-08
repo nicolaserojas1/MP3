@@ -1,21 +1,36 @@
 ##############################################################
-from random import seed
+from random import seed, choice, randint
+from personas import Cocinero, Repartidor, Cliente
+from platos import Comestible, Bebestible
+from restaurante import Restaurante
+
 ## Si necesita agregar imports, debe agregarlos aquí arriba ##
 
 
 ### INICIO PARTE 4 ###
 
 def crear_repartidores():
-    pass
-
+    repartidores = []
+    for _ in range(2):
+        repartidores.append(Repartidor( choice(NOMBRES),randint(1,10)))
+    return repartidores
 def crear_cocineros():
-    pass
+    cocineros = []
+    for _ in range(5):
+        cocineros.append(Cocinero(choice(NOMBRES), randint(1,10)))
+    return cocineros
 
 def crear_clientes():
-    pass
+    clientes = []
+    for _ in range(5):
+        clientes.append(Cliente(choice(NOMBRES), randint(1,10)))
+    return clientes
 
 def crear_restaurante():
-    pass
+    Restaurantes = []
+    for _ in range(5):
+        Restaurantes.append(Restaurante(choice(NOMBRES), randint(1,10)))
+    return Restaurantes
 
 ### FIN PARTE 4 ###
 
